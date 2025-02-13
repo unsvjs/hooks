@@ -1,0 +1,12 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/elements": [
+		"src/routes/+layout.ts"
+	],
+	"/elements/useActiveElement": [
+		"src/routes/+layout.ts"
+	]
+}
