@@ -1,9 +1,9 @@
 import { bounding } from './bounding.js';
 
-export const UNDERMOUSE_ZEROS: UndermouseValue = {
+export const MOUSEOVER_ZEROS: MouseoverValue = {
 	delta_x: 0,
 	delta_y: 0,
-	is_under: false,
+	mouseover: false,
 	mouse_x: 0,
 	mouse_y: 0,
 	element_x: 0,
@@ -12,7 +12,7 @@ export const UNDERMOUSE_ZEROS: UndermouseValue = {
 	element_width: 0
 };
 
-export type UndermouseValue = {
+export type MouseoverValue = {
 	mouse_x: number;
 	mouse_y: number;
 	element_x: number;
@@ -28,13 +28,13 @@ export type UndermouseValue = {
 	 */
 	delta_y: number;
 	/**
-	 * If element is under the mouse (the mouse is inside of the element)
+	 * If mouse is over the element
 	 */
-	is_under: boolean;
+	mouseover: boolean;
 };
 
-export function undermouse(node: HTMLElement, callback: (v: UndermouseValue) => void) {
-	const value = UNDERMOUSE_ZEROS;
+export function mouseover(node: HTMLElement, callback: (v: MouseoverValue) => void) {
+	const value = MOUSEOVER_ZEROS;
 	const bounding_handler = bounding(node, (v) => {
 		value.element_x = v.left;
 		value.element_y = v.top;
@@ -56,7 +56,7 @@ export function undermouse(node: HTMLElement, callback: (v: UndermouseValue) => 
 		const within_x = value.delta_x >= 0 && value.delta_x <= value.element_width;
 		const within_y = value.delta_y >= 0 && value.delta_y <= value.element_height;
 
-		value.is_under = within_x && within_y;
+		value.mouseover = within_x && within_y;
 
 		callback(value);
 	}

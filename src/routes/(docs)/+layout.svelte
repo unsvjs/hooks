@@ -5,7 +5,7 @@
 
 	// const main_links = [];
 	const links = {
-		actions: ['bounding', 'resize', 'visibility', 'undermouse'],
+		actions: ['bounding', 'mouseover', 'resize', 'visibility'],
 		stores: ['active-element']
 	};
 </script>
@@ -38,7 +38,7 @@
 <nav class="border-r flex flex-col w-64 p-4 gap-0.5 fixed top-16 z-10 min-h-[calc(100vh-4rem)]">
 	{#each Object.entries(links) as [key, names] (key)}
 		{#if !!key}
-			<span class="uppercase text-xs flex items-center px-4 pt-4 pb-2 font-semibold text-black/50">
+			<span class="uppercase text-xs flex items-center px-4 pt-4 pb-2 font-semibold text-black/40">
 				{key}
 			</span>
 		{/if}
@@ -58,7 +58,7 @@
 		{/each}
 	{/each}
 </nav>
-<div class="flex min-h-[calc(100vh-4rem)] pt-16 pl-64">
+<div class="flex min-h-vh mb-500 pt-16 pl-64">
 	<main class="flex-grow p-4">
 		{@render children?.()}
 		<!-- <div class="h-2000"></div>    -->
