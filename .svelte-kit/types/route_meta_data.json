@@ -1,12 +1,11 @@
 {
-	"/": [
-		"src/routes/+layout.ts",
-		"src/routes/+layout.ts"
-	],
-	"/elements": [
-		"src/routes/+layout.ts"
-	],
-	"/elements/useActiveElement": [
-		"src/routes/+layout.ts"
-	]
+	"/(docs)": [],
+	"/": [],
+	"/(docs)/actions": [],
+	"/(docs)/actions/bounding": [],
+	"/(docs)/actions/resize": [],
+	"/(docs)/actions/undermouse": [],
+	"/(docs)/actions/visibility": [],
+	"/(docs)/stores": [],
+	"/(docs)/stores/active-element": []
 }

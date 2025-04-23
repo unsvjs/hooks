@@ -1,6 +1,8 @@
-<script>
-  const { children } = $props()
+<script lang="ts">
+	import '@unocss/reset/tailwind.css';
+	import 'virtual:uno.css';
+
+	const { children } = $props();
 </script>
 
-<!-- Leave this. Or you can add more content for your custom layout -->
 {@render children?.()}

@@ -1,8 +1,25 @@
+test-results
 node_modules
-coverage
-dist
-.vscode
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+/dist
+
+# OS
 .DS_Store
-.eslintcache
-*.log*
-*.env*
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*

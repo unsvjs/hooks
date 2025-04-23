@@ -1,26 +1,45 @@
-import { defaultTheme } from "@sveltepress/theme-default";
-import { sveltepress } from "@sveltepress/vite";
-import { defineConfig } from "vite";
+import { svelteTesting } from '@testing-library/svelte/vite';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+import unocss from 'unocss/vite';
+import {
+	transformerDirectives,
+	transformerCompileClass,
+	transformerVariantGroup,
+	presetWind3
+} from 'unocss';
 
-const config = defineConfig({
-  plugins: [
-    sveltepress({
-      theme: defaultTheme({
-        navbar: [
-          // Add your navbar configs here
-        ],
-        sidebar: {
-          // Add your sidebar configs here
-        },
-        github: "https://github.com/unsvjs/hooks",
-        logo: "/sveltepress.svg",
-      }),
-      siteConfig: {
-        title: "unsv/hooks",
-        description: "collection of Svelte utilities",
-      },
-    }),
-  ],
+export default defineConfig({
+	plugins: [
+		sveltekit(),
+		unocss({
+			presets: [presetWind3()],
+			transformers: [transformerDirectives(), transformerCompileClass(), transformerVariantGroup()]
+		})
+	],
+	test: {
+		workspace: [
+			{
+				extends: './vite.config.ts',
+				plugins: [svelteTesting()],
+				test: {
+					name: 'client',
+					environment: 'jsdom',
+					clearMocks: true,
+					include: ['src/**/*.svelte.{test,spec}.{js,ts}'],
+					exclude: ['src/lib/server/**'],
+					setupFiles: ['./vitest-setup-client.ts']
+				}
+			},
+			{
+				extends: './vite.config.ts',
+				test: {
+					name: 'server',
+					environment: 'node',
+					include: ['src/**/*.{test,spec}.{js,ts}'],
+					exclude: ['src/**/*.svelte.{test,spec}.{js,ts}']
+				}
+			}
+		]
+	}
 });
-
-export default config;

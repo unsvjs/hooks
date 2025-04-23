@@ -1,97 +1,58 @@
-# @unsv/hooks
+# Svelte library
 
-<!-- automd:badges color=yellow -->
+Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
 
-[![npm version](https://img.shields.io/npm/v/@unsv/hooks?color=yellow)](https://npmjs.com/package/@unsv/hooks)
-[![npm downloads](https://img.shields.io/npm/dm/@unsv/hooks?color=yellow)](https://npm.chart.dev/@unsv/hooks)
+Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
 
-<!-- /automd -->
+## Creating a project
 
-collection of Svelte utilities
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Usage
+```bash
+# create a new project in the current directory
+npx sv create
 
-Install package:
-
-<!-- automd:pm-install -->
-
-```sh
-# ✨ Auto-detect
-npx nypm install @unsv/hooks
-
-# npm
-npm install @unsv/hooks
-
-# yarn
-yarn add @unsv/hooks
-
-# pnpm
-pnpm install @unsv/hooks
-
-# bun
-bun install @unsv/hooks
-
-# deno
-deno install @unsv/hooks
+# create a new project in my-app
+npx sv create my-app
 ```
 
-<!-- /automd -->
+## Developing
 
-Import:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-<!-- automd:jsimport cjs cdn name="pkg" -->
+```bash
+npm run dev
 
-**ESM** (Node.js, Bun, Deno)
-
-```js
-import {} from "@unsv/hooks";
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-**CommonJS** (Legacy Node.js)
+Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
-```js
-const {} = require("@unsv/hooks");
+## Building
+
+To build your library:
+
+```bash
+npm run package
 ```
 
-**CDN** (Deno, Bun and Browsers)
+To create a production version of your showcase app:
 
-```js
-import {} from "https://esm.sh/@unsv/hooks";
+```bash
+npm run build
 ```
 
-<!-- /automd -->
+You can preview the production build with `npm run preview`.
 
-## Development
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
-<details>
+## Publishing
 
-<summary>local development</summary>
+Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
 
-- Clone this repository
-- Install latest LTS version of [Node.js](https://nodejs.org/en/)
-- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `pnpm install`
-- Run interactive tests using `pnpm dev`
+To publish your library to [npm](https://www.npmjs.com):
 
-</details>
-
-## License
-
-<!-- automd:contributors license=MIT -->
-
-Published under the [MIT](https://github.com/unsvjs/hooks/blob/main/LICENSE) license.
-Made by [community](https://github.com/unsvjs/hooks/graphs/contributors) 💛
-<br><br>
-<a href="https://github.com/unsvjs/hooks/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=unsvjs/hooks" />
-</a>
-
-<!-- /automd -->
-
-<!-- automd:with-automd -->
-
----
-
-_🤖 auto updated with [automd](https://automd.unjs.io)_
-
-<!-- /automd -->
+```bash
+npm publish
+```
