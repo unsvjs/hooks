@@ -8,6 +8,7 @@ import {
 	transformerVariantGroup,
 	presetWind3
 } from 'unocss';
+import icons from 'unplugin-icons/vite';
 
 export default defineConfig({
 	plugins: [
@@ -15,6 +16,9 @@ export default defineConfig({
 		unocss({
 			presets: [presetWind3()],
 			transformers: [transformerDirectives(), transformerCompileClass(), transformerVariantGroup()]
+		}),
+		icons({
+			compiler: 'svelte'
 		})
 	],
 	test: {

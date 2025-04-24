@@ -1,8 +1,16 @@
-<script lang="ts">
+<script>
 	import { mouseover } from '$lib/actions/index.js';
 
 	let is_over = $state(false);
 </script>
+
+# Mouseover
+
+Reactive mouse position related to an element
+
+---
+
+## Demo
 
 <div
 	class={[

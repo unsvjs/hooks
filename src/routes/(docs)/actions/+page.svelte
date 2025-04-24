@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 
-	goto('/actions/bounding');
+	$effect(() => {
+		goto('/actions/bounding');
+	});
 </script>

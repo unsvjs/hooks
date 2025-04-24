@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { IconSearch, IconBrandGithub } from '@tabler/icons-svelte';
+	import IconSearch from '~icons/tabler/search';
+	import IconBrandGithub from '~icons/tabler/brand-github';
+	import { titleCase } from 'scule';
 	import { page } from '$app/state';
 	const { children } = $props();
 
@@ -38,7 +40,7 @@
 <nav class="border-r flex flex-col w-64 p-4 gap-0.5 fixed top-16 z-10 min-h-[calc(100vh-4rem)]">
 	{#each Object.entries(links) as [key, names] (key)}
 		{#if !!key}
-			<span class="uppercase text-xs flex items-center px-4 pt-4 pb-2 font-semibold text-black/40">
+			<span class="uppercase text-xs flex items-center px-4 pt-4 pb-2 font-bold text-black/40">
 				{key}
 			</span>
 		{/if}
@@ -53,14 +55,14 @@
 				]}
 				{href}
 			>
-				{name}
+				{titleCase(name)}
 			</a>
 		{/each}
 	{/each}
 </nav>
-<div class="flex min-h-vh mb-500 pt-16 pl-64">
-	<main class="flex-grow p-4">
+
+<div class="flex min-h-vh pt-16 px-64">
+	<main class="flex-grow p-4 max-w-5xl mx-auto flex flex-col gap-6">
 		{@render children?.()}
-		<!-- <div class="h-2000"></div>    -->
 	</main>
 </div>

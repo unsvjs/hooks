@@ -3,8 +3,8 @@
 	"/": [],
 	"/(docs)/actions": [],
 	"/(docs)/actions/bounding": [],
+	"/(docs)/actions/mouseover": [],
 	"/(docs)/actions/resize": [],
-	"/(docs)/actions/undermouse": [],
 	"/(docs)/actions/visibility": [],
 	"/(docs)/stores": [],
 	"/(docs)/stores/active-element": []

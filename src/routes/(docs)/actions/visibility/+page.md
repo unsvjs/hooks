@@ -1,8 +1,17 @@
-<script lang="ts">
+<script>
 	import { visibility } from '$lib/actions/index.js';
 
 	let visible = $state(true);
 </script>
+
+# Visibility
+
+Tracks the visibility of an element within the viewport.
+
+---
+
+## Demo
+
 
 <div class="bg-zinc-100 border-2 border-dashed p-4" use:visibility={(v) => (visible = v)}>
 	target element

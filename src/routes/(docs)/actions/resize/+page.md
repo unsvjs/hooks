@@ -1,8 +1,16 @@
-<script lang="ts">
+<script>
 	import { resize } from '$lib/actions/index.js';
 
 	let num = $state();
 </script>
+
+# Resize
+
+Reports changes to the dimensions of an Element's content or the border-box
+
+---
+
+## Demo
 
 <textarea
 	class="resize w-sm max-w-full h-32"

@@ -20,8 +20,8 @@ export const dictionary = {
 		"/": [3],
 		"/(docs)/actions": [4,[2]],
 		"/(docs)/actions/bounding": [5,[2]],
-		"/(docs)/actions/resize": [6,[2]],
-		"/(docs)/actions/undermouse": [7,[2]],
+		"/(docs)/actions/mouseover": [6,[2]],
+		"/(docs)/actions/resize": [7,[2]],
 		"/(docs)/actions/visibility": [8,[2]],
 		"/(docs)/stores": [9,[2]],
 		"/(docs)/stores/active-element": [10,[2]]
