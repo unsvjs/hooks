@@ -10,6 +10,8 @@ Tracks the visibility of an element within the viewport.
 
 ---
 
+<br>
+
 ## Demo
 
 

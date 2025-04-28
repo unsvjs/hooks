@@ -11,7 +11,9 @@ export const nodes = [
 	() => import('./nodes/7'),
 	() => import('./nodes/8'),
 	() => import('./nodes/9'),
-	() => import('./nodes/10')
+	() => import('./nodes/10'),
+	() => import('./nodes/11'),
+	() => import('./nodes/12')
 ];
 
 export const server_loads = [];
@@ -20,11 +22,13 @@ export const dictionary = {
 		"/": [3],
 		"/(docs)/actions": [4,[2]],
 		"/(docs)/actions/bounding": [5,[2]],
-		"/(docs)/actions/mouseover": [6,[2]],
-		"/(docs)/actions/resize": [7,[2]],
-		"/(docs)/actions/visibility": [8,[2]],
-		"/(docs)/stores": [9,[2]],
-		"/(docs)/stores/active-element": [10,[2]]
+		"/(docs)/actions/clickoutside": [6,[2]],
+		"/(docs)/actions/hover": [7,[2]],
+		"/(docs)/actions/mouseover": [8,[2]],
+		"/(docs)/actions/resize": [9,[2]],
+		"/(docs)/actions/visibility": [10,[2]],
+		"/(docs)/stores": [11,[2]],
+		"/(docs)/stores/active-element": [12,[2]]
 	};
 
 export const hooks = {

@@ -6,9 +6,11 @@
 
 # Mouseover
 
-Reactive mouse position related to an element
+Reactive mouse position related to an element, Similar to hover, but DOES NOT respect elements above target element.
 
 ---
+
+<br>
 
 ## Demo
 

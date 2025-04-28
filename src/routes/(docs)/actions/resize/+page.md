@@ -10,6 +10,8 @@ Reports changes to the dimensions of an Element's content or the border-box
 
 ---
 
+<br>
+
 ## Demo
 
 <textarea

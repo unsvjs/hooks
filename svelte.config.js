@@ -7,7 +7,7 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extension: '.md',
+			extensions: ['.md'],
 			highlight: {
 				highlighter: async (code, lang = 'text') => {
 					const highlighter = await createHighlighter({

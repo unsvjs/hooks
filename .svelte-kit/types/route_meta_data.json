@@ -3,6 +3,8 @@
 	"/": [],
 	"/(docs)/actions": [],
 	"/(docs)/actions/bounding": [],
+	"/(docs)/actions/clickoutside": [],
+	"/(docs)/actions/hover": [],
 	"/(docs)/actions/mouseover": [],
 	"/(docs)/actions/resize": [],
 	"/(docs)/actions/visibility": [],

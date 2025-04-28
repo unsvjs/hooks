@@ -7,7 +7,7 @@
 
 	// const main_links = [];
 	const links = {
-		actions: ['bounding', 'mouseover', 'resize', 'visibility'],
+		actions: ['bounding', 'clickoutside', 'hover', 'mouseover', 'resize', 'visibility'],
 		stores: ['active-element']
 	};
 </script>
@@ -17,7 +17,7 @@
 		'h-16 bg-white/50 border-b backdrop-blur-md fixed w-full top-0 z-20 flex items-center gap-4 px-4'
 	]}
 >
-	<div class="h-full w-60 font-black text-xl flex items-center px-4">@unsv/hooks</div>
+	<div class="h-full w-60 font-bold text-xl flex items-center px-4">@unsv/hooks</div>
 
 	<button
 		class="h-10 bg-zinc-100 hover:(bg-zinc-200) transition px-4 rounded-md text-black/50 flex items-center gap-1 text-sm"
