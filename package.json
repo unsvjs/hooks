@@ -1,5 +1,5 @@
 {
-	"name": "hooks",
+	"name": "@unsv/hooks",
 	"version": "0.0.1",
 	"license": "MIT",
 	"scripts": {
