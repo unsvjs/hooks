@@ -1,6 +1,10 @@
 export function resize(node: HTMLElement, callback: ResizeObserverCallback) {
-	const observer = new ResizeObserver(callback);
-	observer.observe(node);
+	let observer: ResizeObserver;
+
+	if (typeof ResizeObserver !== 'undefined') {
+		observer = new ResizeObserver(callback);
+		observer.observe(node);
+	}
 
 	return {
 		destroy() {

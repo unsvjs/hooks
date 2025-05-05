@@ -43,9 +43,11 @@ export function bounding(node: HTMLElement, params: BoundingParams) {
 	const onresize = resize(node, recalculate);
 	const { windowresize = true, windowscroll = true, immediate = true } = has_value ? params : {};
 
-	if (windowresize) window.addEventListener('resize', recalculate);
-	if (windowscroll) window.addEventListener('scroll', recalculate);
-	if (immediate) callback(node.getBoundingClientRect());
+	if (typeof window !== 'undefined') {
+		if (windowresize) window.addEventListener('resize', recalculate);
+		if (windowscroll) window.addEventListener('scroll', recalculate);
+		if (immediate) callback(node.getBoundingClientRect());
+	}
 
 	return {
 		destroy() {

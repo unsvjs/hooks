@@ -5,7 +5,11 @@
 <header
 	class={['h-16 bg-white/50 backdrop-blur-md fixed w-full top-0 z-20 flex items-center gap-4 px-4']}
 >
-	<div class="h-full w-60 font-bold text-xl flex items-center px-4">@unsv/hooks</div>
+	<div class="h-full w-60 font-bold text-xl flex items-center px-4">
+		<img src="/icon.svg" alt="icon" />
+
+		@unsv/hooks
+	</div>
 
 	<span class="flex-grow"> </span>
 
